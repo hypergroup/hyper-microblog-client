@@ -1,0 +1,18 @@
+div
+  ul
+    li
+      a(data-hyper-link="/") Home
+    li
+      a(data-hyper-link="/notification") Notifications
+    li
+      a(data-hyper-link="/users/:.account") Profile
+  ul
+    li
+      a(data-hyper-link="/account") Account
+    li
+      a(data-sl-modal) Compose
+      .compose
+        form(data-hyper-form=".posts.create", data-hyper-handle="close")
+          div(data-ng-repeat="input in inputs")
+            input(data-hyper-input="input")
+          input(type="submit", value="Create")

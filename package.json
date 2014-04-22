@@ -1,0 +1,29 @@
+{
+  "name": "hyper-microblog-client",
+  "version": "0.0.0",
+  "description": "A hyper-microblog client written with poe-ui",
+  "author": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "./node_modules/.bin/startup start",
+    "test": "NODE_ENV=test ./node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hypergroup/hyper-microblog-client"
+  },
+  "engines": {
+    "node": "0.10.x",
+    "npm": "1.x.x"
+  },
+  "dependencies": {
+    "poe-ui": "~0.3.13",
+    "startup": "~0.3.0",
+    "envs": "~0.1.4"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "lr": "*"
+  }
+}

@@ -1,0 +1,22 @@
+.posts
+  .post(data-ng-repeat="post in posts")
+    div(data-hyper="post.author")
+      img.image(data-hyper-img="author.image.thumbnail")
+      .header
+        a.author(data-hyper-link="/users/:author")
+          span.name(data-hyper-bind="author.name")
+          | @
+          span.handle(data-hyper-bind="author.handle")
+          | -
+        span.date(data-hyper-bind="post.date")
+    p.content(data-hyper="post.content")
+      span(data-ng-repeat="piece in content")
+        span(data-ng-switch on="piece.type")
+          a(data-ng-switch-when="mention", data-hyper-link="/users/:piece")
+            | @
+            span(data-hyper-bind="piece.handle")
+          a(data-ng-switch-when="hashtag", data-hyper-link="/hashtags/:piece")
+            | #
+            span(data-hyper-bind="piece.title")
+          a(data-ng-switch-when="link", data-ng-href="{{piece.href}}", data-ng-bind="piece.title || piece.href")
+          span(data-ng-switch-default, data-ng-bind="piece")

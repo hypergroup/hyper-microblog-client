@@ -1,0 +1,21 @@
+aside.sidenav(data-hyper=".account")
+  img(data-sl-modal, data-hyper-img=".account.image")
+  .image-popup
+    img(data-hyper-img=".account.image")
+  h1(data-hyper-bind="account.name")
+  h2
+    | @
+    span(data-hyper-bind="account.handle")
+  .info
+    .tweets(data-hyper="account.feed")
+      span Posts
+      span(data-hyper-bind="feed.count")
+    .following(data-hyper="account.following")
+      span Following
+      span(data-hyper-bind="following.count")
+    .followers(data-hyper="account.followers")
+      span Followers
+      span(data-hyper-bind="followers.count")
+    .link(data-hyper="account.link")
+      a(data-ng-href="{{link.href}}", data-hyper-bind="link.title")
+    .joined(data-hyper-bind="account.joined")

@@ -1,0 +1,15 @@
+{
+  "repo": "hypergroup/hyper-microblog-client",
+  "name": "hyper-microblog-client",
+  "description": "A hyper-microblog client written with poe-ui",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "poegroup/poe-ui": "*",
+    "camshaft/component-angular": "*",
+    "shoelace-ui/modal": "*"
+  },
+  "development": {},
+  "main": "public/javascripts/index.js",
+  "license": "MIT"
+}
